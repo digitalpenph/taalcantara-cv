@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unknown Chatroom</title>
+<link rel="icon" href="img/unknown-logo.png" />
+
+<link rel="stylesheet" type="text/css" href="js/jScrollPane/jScrollPane.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<link rel="stylesheet" type="text/css" href="css/chat.css" />
+
+<link rel="manifest" href="manifest.json">   
+    <meta name="theme-color" content="black">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Unknown">
+    <link rel="apple-touch-icon" href="/theme/adaptable/pix/uvle-sqr-128x128.png">
+    <link rel="mask-icon" href="/theme/adaptable/pix/uvle-sqr-128x128.png" color="#004522">
+    <!-- Add to Windows Desktop -->
+    <meta name="msapplication-TileImage" content="/theme/adaptable/pix/uvle-sqr-128x128.png">
+    <meta name="msapplication-TileColor" content="black">
+    <!-- Add to Home Screen Pop Up -->
+    <script>
+        if ('serviceWorker' in navigator) {
+                console.log("Will the service worker register?");
+                navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg){
+                console.log("Yes, it did.");
+                }).catch(function(err) {
+                console.log("No it didn't. This happened: ", err)
+                });
+        }
+    </script>
+
+</head>
+
+<body>
+<div id="chatContainer">
+
+    <div id="chatTopBar" class="rounded"></div>
+    <div id="chatLineHolder"></div>
+    
+    <div id="chatUsers" class="rounded"></div>
+    <div id="chatBottomBar" class="rounded">
+    	<div class="tip"></div>
+        
+        <form id="loginForm" method="post" action="">
+            <input id="name" name="name" class="rounded" maxlength="10" />
+            <input id="email" name="email" class="rounded" style="display: none" />
+            <input type="submit" class="blueButton" value="Login" />
+        </form>
+        
+        <form id="submitForm" method="post" action="">
+            <input placeholder="Type a message..." id="chatText" name="chatText" class="rounded" maxlength="255" />
+            <input type="submit" class="blueButton" value="Submit" />
+        </form>
+        
+    </div>
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/jScrollPane/jquery.mousewheel.js"></script>
+<script src="js/jScrollPane/jScrollPane.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

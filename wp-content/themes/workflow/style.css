@@ -1086,6 +1086,9 @@ footer.footer[role="contentinfo"] .copyright a {
 .gallery-columns-4 .gallery-item:nth-child(4n+4) {
     margin-right: 0;
 }
+.view {
+	color: #0073aa !important;
+}
 
 /*media queries*/
 
